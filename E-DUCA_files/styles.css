@@ -1,0 +1,122 @@
+:root {
+    --bg-color-dark-top: #102060;
+    --bg-color-dark-bottom: #7040c0;
+    --bg-color-light-top: #b7bccf;
+    --bg-color-light-bottom: #d4c5ec;
+    --img-logo-navbar-size: 36px;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+main {
+    flex-basis: 400px;
+}
+
+.mw-75 {
+    max-width: 75% !important;
+}
+
+.mw-50 {
+    max-width: 50% !important;
+}
+
+.mw-25 {
+    max-width: 25% !important;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    font-family: serif;
+} */
+
+.bg-main-dark {
+    background-image: linear-gradient(to bottom right, var(--bg-color-dark-top), var(--bg-color-dark-bottom));
+}
+
+.bg-main-light {
+    background-image: linear-gradient(to bottom right, var(--bg-color-light-top), var(--bg-color-light-bottom));
+}
+
+.img-logo-navbar {
+    width: var(--img-logo-navbar-size);
+    height: var(--img-logo-navbar-size);
+}
+
+ul.nav.nav-tabs {
+    --bs-nav-link-color: var(--bs-gray-400);
+    --bs-nav-link-hover-color: var(--bs-gray-100);
+}
+
+.nowrap-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nowrap-text-2line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.5rem;   /* fallback */
+    max-height: 3rem;      /* fallback */
+}
+
+/* CONTENT.PHP */
+
+.module {
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    transition: all 100ms;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.module:hover, .module.selected {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.module::after {
+    content: '⮜';
+    float: right;
+}
+
+.module.selected::after {
+    content: '⮟';
+    float: right;
+}
+
+.activity {
+    cursor: pointer;
+    border-bottom: 1px solid black ;
+}
+
+.activity:hover, .activity.selected {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.activity-container {
+    /* display: none; */
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
+
+.activity-container.selected {
+    /* display: block; */
+    max-height: 100%;
+    transition: max-height 0.25s ease-in;
+}
+
+.date-style {
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
